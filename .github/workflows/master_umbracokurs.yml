@@ -52,4 +52,4 @@ jobs:
           app-name: 'Umbracokurs'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AD6303BBCC0B427B93094CFAC9843766 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C615EA0AEFBD46299C0D6AB854F770C8 }}
