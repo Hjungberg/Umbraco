@@ -1,0 +1,43 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	var content = (ContentModels.ContactSection)Model.Content;
+}
+
+<section class="bg-white-100 bg-no-repeat py-16 py-28
+        [background-image:url(@content.ContactBackgroundPicture?.Url())]
+        [background-position:center]" >
+
+	<div class="container mx-auto px-4 relative z-10">
+
+
+		<div class="flex m-8">
+			<div>
+				@if (content.ContactBackgroundPicture != null)
+				{
+					<img src="@content.ContactPicture?.Url()"  />
+				}
+			</div>
+			<div>
+				<div class="font-bold text-4xl  mx-8">@content.ContactText</div>
+
+				<div class="px-4">
+					<p class="font-bold">Office location</p>
+					<p>@content.ContactAddress</p>
+				</div>
+				<div class="px-4">
+					<p class="font-bold">Phone number</p>
+					<p>@content.ContactPhone</p>
+				</div>
+				<div class="px-4">
+					<p class="font-bold">Email address</p>
+					<p>@content.ContactEmail</p>
+				</div>
+			</div>
+		</div>
+
+		
+
+	</div>
+</section>
+

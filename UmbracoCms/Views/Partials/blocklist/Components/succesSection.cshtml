@@ -1,0 +1,50 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	var content = (ContentModels.SuccesSection)Model.Content;
+}
+
+<section class="py-[4rem] border-gray-400 py-28 [background-image:url('/images/dot-map_1.png')">
+	<div class="container mx-auto px-4 relative z-10">
+		<div class="max-w-7xl mx-8 mb-8 px-4 ">
+			<div>
+				<p>SUCCESS STORIES</p>
+				<P>Success Story</P>
+			</div>
+			<div class="flex justify-center flex-auto ">
+				<div class="justify-between">
+					<div>
+						<p>@content.SuccessCustomers</p>
+					</div>
+					<div>
+						<p>More then 100 customers has been served</p>
+					</div>
+				</div>
+				<div>
+					<div>
+						<p>@content.SuccessProjects</p>
+					</div>
+					<div>
+						<p>More then 370 projects has been compleated</p>
+					</div>
+				</div>
+				<div>
+					<div>
+						<p>@content.SuccessBranches</p>
+					</div>
+					<div>
+						<p>More than 125 branches has been established in Europe and America</p>
+					</div>
+				</div>
+			</div>
+			<div>
+				<img src="@content.SuccessPicture?.Url()" />
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+</section>

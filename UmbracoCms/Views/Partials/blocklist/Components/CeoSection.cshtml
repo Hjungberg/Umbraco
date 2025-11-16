@@ -1,0 +1,29 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	var content = (ContentModels.CeoSection)Model.Content;
+}
+
+<section>
+
+
+
+	<div class="container max-w-7xl mx-auto px-4 relative z-10 gap-10 py-28">
+		<div class="flex gap-8 ">
+			<div class="mx-8">
+				@if (content.CeoPicture != null)
+				{
+					<img src="@content.CeoPicture?.Url()" />
+				}
+				<div>@content.CeoName</div>
+			</div>
+			<div class="mx-8">
+				<p class="rte">@Html.Raw(@content.CeoText)</p>
+			</div>
+		</div>
+	</div>
+
+
+	
+</section>
+ 
